@@ -4,7 +4,7 @@ const fs = require("fs");
 const dateFormat = require('dateformat');
 const client = new Discord.Client(); 
 const Canvas = require("canvas"); 
-const prefix = "#"
+const prefix = "$"
 const id = JSON.parse(fs.readFileSync("./id/rank.json", "utf8"));
 
 let banse = new Set();
@@ -351,7 +351,7 @@ client.on('message', message => {
   if(message.content.startsWith(`${prefix}invite`)){
     var embed = new Discord.RichEmbed()
     .setTitle(">> ClickHere To Add" + `${client.user.username}` + " <<")
-    .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=2080374975")
+    .setURL("https://discordapp.com/oauth2/authorize?client_id=" + `${client.user.id}` + "&scope=bot&permissions=8")
     .setTimestamp()
     .setFooter(`Requested By | ${message.author.username}`)
     .setColor("RANDOM")
@@ -1417,12 +1417,7 @@ client.on('message', message => {
 
 message.author.sendMessage(`
 **
-╭━━━╮╱╱╱╱╭━━╮╱╱╱╭╮
-┃╭━╮┃╱╱╱╱┃╭╮┃╱╱╭╯╰╮
-┃╰━╯┣━┳━━┫╰╯╰┳━┻╮╭╯
-┃╭━━┫╭┫╭╮┃╭━╮┃╭╮┃┃
-┃┃╱╱┃┃┃╰╯┃╰━╯┃╰╯┃╰╮
-╰╯╱╱╰╯╰━━┻━━━┻━━┻━╯
+
 [❖═════ لتشغيل اللوق Log يجب وجود روم باسم ═══════❖]
 [❖═════════════════════════════❖]
         لماذا بروبوت ؟
